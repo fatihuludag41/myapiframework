@@ -1,40 +1,41 @@
 package pojos;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class BookingDatesPojo {
-    private String checkIn;
-    private String checkOut;
+    private String checkin;
+    private String checkout;
 
-    public String getCheckIn() {
-        return checkIn;
+    public String getCheckin() {
+        return checkin;
     }
 
-    public void setCheckIn(String checkIn) {
-        this.checkIn = checkIn;
+    public void setCheckin(String checkin) {
+        this.checkin = checkin;
     }
 
-    public String getCheckOut() {
-        return checkOut;
+    public String getCheckout() {
+        return checkout;
     }
 
-    public void setCheckOut(String checkOut) {
-        this.checkOut = checkOut;
+    public void setCheckout(String checkout) {
+        this.checkout = checkout;
     }
-
 
     public BookingDatesPojo() {
     }
 
-    public BookingDatesPojo(String checkIn, String checkOut) {
-        this.checkIn = checkIn;
-        this.checkOut = checkOut;
+    public BookingDatesPojo(String checkin, String checkout) {
+        this.checkin = checkin;
+        this.checkout = checkout;
     }
-
 
     @Override
     public String toString() {
         return "BookingDatesPojo{" +
-                "checkIn='" + checkIn + '\'' +
-                ", checkOut='" + checkOut + '\'' +
+                "checkin='" + checkin + '\'' +
+                ", checkout='" + checkout + '\'' +
                 '}';
     }
 }

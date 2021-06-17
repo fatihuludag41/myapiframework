@@ -1,89 +1,88 @@
 package pojos;
 
+import com.google.gson.annotations.Expose;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BookingPojo {
-    private String firstName;
-    private String lastName;
-    private int totalPrice;
-    private boolean depositPaid;
-    private BookingDatesPojo bookingDates;
-    private String additionalNeeds;
+    @Expose
+    private String firstname;
+    private String lastname;
+    private int totalprice;
+    private boolean depositpaid;
+    private BookingDatesPojo bookingdates;
+    private String additionalneeds;
 
-
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
-    public int getTotalPrice() {
-        return totalPrice;
+    public int getTotalprice() {
+        return totalprice;
     }
 
-    public void setTotalPrice(int totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setTotalprice(int totalprice) {
+        this.totalprice = totalprice;
     }
 
-    public boolean isDepositPaid() {
-        return depositPaid;
+    public boolean isDepositpaid() {
+        return depositpaid;
     }
 
-    public void setDepositPaid(boolean depositPaid) {
-        this.depositPaid = depositPaid;
+    public void setDepositpaid(boolean depositpaid) {
+        this.depositpaid = depositpaid;
     }
 
-    public BookingDatesPojo getBookingDates() {
-        return bookingDates;
+    public BookingDatesPojo getBookingdates() {
+        return bookingdates;
     }
 
-    public void setBookingDates(BookingDatesPojo bookingDates) {
-        this.bookingDates = bookingDates;
+    public void setBookingdates(BookingDatesPojo bookingdates) {
+        this.bookingdates = bookingdates;
     }
 
-    public String getAdditionalNeeds() {
-        return additionalNeeds;
+    public String getAdditionalneeds() {
+        return additionalneeds;
     }
 
-    public void setAdditionalNeeds(String additionalNeeds) {
-        this.additionalNeeds = additionalNeeds;
+    public void setAdditionalneeds(String additionalneeds) {
+        this.additionalneeds = additionalneeds;
     }
 
 
     public BookingPojo() {
     }
 
-
-    public BookingPojo(String firstName, String lastName, int totalPrice, boolean depositPaid, BookingDatesPojo bookingDates, String additionalNeeds) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.totalPrice = totalPrice;
-        this.depositPaid = depositPaid;
-        this.bookingDates = bookingDates;
-        this.additionalNeeds = additionalNeeds;
+    public BookingPojo(String firstname, String lastname, int totalprice, boolean depositpaid, BookingDatesPojo bookingdates, String additionalneeds) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.totalprice = totalprice;
+        this.depositpaid = depositpaid;
+        this.bookingdates = bookingdates;
+        this.additionalneeds = additionalneeds;
     }
-
 
     @Override
     public String toString() {
         return "BookingPojo{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", totalPrice=" + totalPrice +
-                ", depositPaid=" + depositPaid +
-                ", bookingDates=" + bookingDates +
-                ", additionalNeeds='" + additionalNeeds + '\'' +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", totalprice=" + totalprice +
+                ", depositpaid=" + depositpaid +
+                ", bookingdates=" + bookingdates +
+                ", additionalneeds='" + additionalneeds + '\'' +
                 '}';
     }
 }
